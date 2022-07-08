@@ -20,11 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Calc.h" />
-    <ClInclude Include="Window.h" />
+    <ClInclude Include="MyWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Calc.cpp" />
-    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="MyWindow.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

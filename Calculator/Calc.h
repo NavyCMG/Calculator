@@ -1,6 +1,6 @@
 #pragma once
 #include "wx/wx.h"
-#include "Window.h"
+#include "MyWindow.h"
 
 class Calc : public wxApp
 {

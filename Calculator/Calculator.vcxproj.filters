@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Window.h">
+    <ClInclude Include="MyWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Calc.h">
@@ -23,7 +23,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Window.cpp">
+    <ClCompile Include="MyWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Calc.cpp">

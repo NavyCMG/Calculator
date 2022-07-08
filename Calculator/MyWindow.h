@@ -8,6 +8,8 @@ private:
 public:
 	MyWindow();
 	//~MyWindow();
+	wxButton** buttons = nullptr;
+
 	wxTextCtrl* textbox = nullptr;
 	wxButton* btn1 = nullptr;
 	wxButton* btn2 = nullptr;
@@ -30,5 +32,8 @@ public:
 	wxButton* btnHex = nullptr;
 	wxButton* btnDec = nullptr;
 
+	void OnButtonClicked(wxCommandEvent& evt);
+
+	wxDECLARE_EVENT_TABLE();
 };
 

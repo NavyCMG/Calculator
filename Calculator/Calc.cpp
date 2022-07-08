@@ -1,5 +1,5 @@
 #include "Calc.h"
-#include "Window.h"
+#include "MyWindow.h"
 
 wxIMPLEMENT_APP(Calc); //used to make the App the starting point of the program
 
