@@ -15,12 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="UI.h">
+    <ClInclude Include="Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Calc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="UI.cpp">
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Calc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
