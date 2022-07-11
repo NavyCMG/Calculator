@@ -55,7 +55,6 @@ MyWindow::MyWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(30, 30),
 	{
 		buttons[i]->Bind(wxEVT_COMMAND_BUTTON_CLICKED, &MyWindow::OnButtonClicked, this);
 	}
-
 }
 
 void MyWindow::OnButtonClicked(wxCommandEvent& evt) {
