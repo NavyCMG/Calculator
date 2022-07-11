@@ -5,7 +5,7 @@
 class Calc : public wxApp
 {
 private:
-	MyWindow* window = nullptr;
+	MyWindow *window = nullptr;
 
 public:
 	virtual bool OnInit(); //required initialization method

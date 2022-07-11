@@ -1,5 +1,6 @@
 #pragma once
 #include "wx/wx.h"
+#include "ButtonFactory.h"
 
 class MyWindow : public wxFrame
 {
@@ -11,6 +12,7 @@ public:
 	wxButton** buttons = nullptr;
 
 	wxTextCtrl* textbox = nullptr;
+	wxButton* btn0 = nullptr;
 	wxButton* btn1 = nullptr;
 	wxButton* btn2 = nullptr;
 	wxButton* btn3 = nullptr;
@@ -20,7 +22,6 @@ public:
 	wxButton* btn7 = nullptr;
 	wxButton* btn8 = nullptr;
 	wxButton* btn9 = nullptr;
-	wxButton* btn0 = nullptr;
 	wxButton* btnPlus = nullptr;
 	wxButton* btnMinus = nullptr;
 	wxButton* btnMulti = nullptr;
