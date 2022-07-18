@@ -1,5 +1,6 @@
 #include "MyWindow.h"
 #include "ButtonFactory.h"
+#include "Processor.h"
 
 wxBEGIN_EVENT_TABLE(MyWindow, wxFrame)
 
@@ -59,68 +60,227 @@ MyWindow::MyWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(30, 30),
 
 void MyWindow::OnButtonClicked(wxCommandEvent& evt) {
 
+    Processor* processor = Processor::GetInstance();
+
 	int Id = evt.GetId();
+
     switch (Id)
     {
     case 10000:
+        if (justSolved == true)
+        {
+            num1 = 0;
+            textbox->Clear();
+        }
         textbox->AppendText("0");
+        if (op == ' ')
+        {
+            num1 = (num1 * 10) + 0;
+        }
+        else {
+            num2 = (num2 * 10) + 0;
+        }
+        justSolved = false;
         break;
     case 10001:
+        if (justSolved == true)
+        {
+            num1 = 0;
+            textbox->Clear();
+        }
         textbox->AppendText("1");
+        if (op == ' ')
+        {
+            num1 = (num1 * 10) + 1;
+        }
+        else {
+            num2 = (num2 * 10) + 1;
+        }
+        justSolved = false;
         break;
     case 10002:
+        if (justSolved == true)
+        {
+            num1 = 0;
+            textbox->Clear();
+        }
         textbox->AppendText("2");
+        if (op == ' ')
+        {
+            num1 = (num1 * 10) + 2;
+        }
+        else {
+            num2 = (num2 * 10) + 2;
+        }
+        justSolved = false;
         break;
     case 10003:
+        if (justSolved == true)
+        {
+            num1 = 0;
+            textbox->Clear();
+        }
         textbox->AppendText("3");
+        if (op == ' ')
+        {
+            num1 = (num1 * 10) + 3;
+        }
+        else {
+            num2 = (num2 * 10) + 3;
+        }
+        justSolved = false;
         break;
     case 10004:
+        if (justSolved == true)
+        {
+            num1 = 0;
+            textbox->Clear();
+        }
         textbox->AppendText("4");
+        if (op == ' ')
+        {
+            num1 = (num1 * 10) + 4;
+        }
+        else {
+            num2 = (num2 * 10) + 4;
+        }
+        justSolved = false;
         break;
     case 10005:
+        if (justSolved == true)
+        {
+            num1 = 0;
+            textbox->Clear();
+        }
         textbox->AppendText("5");
+        if (op == ' ')
+        {
+            num1 = (num1 * 10) + 5;
+        }
+        else {
+            num2 = (num2 * 10) + 5;
+        }
+        justSolved = false;
         break;
     case 10006:
+        if (justSolved == true)
+        {
+            num1 = 0;
+            textbox->Clear();
+        }
         textbox->AppendText("6");
+        if (op == ' ')
+        {
+            num1 = (num1 * 10) + 6;
+        }
+        else {
+            num2 = (num2 * 10) + 6;
+        }
+        justSolved = false;
         break;
     case 10007:
+        if (justSolved == true)
+        {
+            num1 = 0;
+            textbox->Clear();
+        }
         textbox->AppendText("7");
+        if (op == ' ')
+        {
+            num1 = (num1 * 10) + 7;
+        }
+        else {
+            num2 = (num2 * 10) + 7;
+        }
+        justSolved = false;
         break;
     case 10008:
+        if (justSolved == true)
+        {
+            num1 = 0;
+            textbox->Clear();
+        }
         textbox->AppendText("8");
+        if (op == ' ')
+        {
+            num1 = (num1 * 10) + 8;
+        }
+        else {
+            num2 = (num2 * 10) + 8;
+        }
+        justSolved = false;
         break;
     case 10009:
+        if (justSolved == true)
+        {
+            num1 = 0;
+            textbox->Clear();
+        }
         textbox->AppendText("9");
+        if (op == ' ')
+        {
+            num1 = (num1 * 10) + 9;
+        }
+        else {
+            num2 = (num2 * 10) + 9;
+        }
+        justSolved = false;
         break;
     case 10010:
         textbox->Clear();
+        num1 = 0;
+        num2 = 0;
+        result = 0;
+        op = ' ';
         break;
     case 10011:
-        textbox->AppendText("=");
+        result = processor->Solve(num1, num2, op);
+        textbox->Clear();
+        textbox->AppendText(std::to_string(result));
+        op = ' ';
+        num1 = result;
+        num2 = 0;
+        justSolved = true;
         break;
     case 10012:
         textbox->AppendText("+");
+        op = '+';
+        justSolved = false;
         break;
     case 10013:
         textbox->AppendText("-");
+        op = '-';
+        justSolved = false;
         break;
     case 10014:
         textbox->AppendText("x");
+        op = '*';
+        justSolved = false;
         break;
     case 10015:
         textbox->AppendText("/");
+        op = '/';
+        justSolved = false;
         break;
     case 10016:
-        textbox->AppendText("Bin");
+        textbox->Clear();
+        textbox->AppendText(processor->ToBinaryString(num1));
+        justSolved = false;
         break;
     case 10017:
-        textbox->AppendText("I put a spell on you!");
+        textbox->Clear();
+        textbox->AppendText(processor->ToHexadecimalString(num1));
+        justSolved = false;
         break;
     case 10018:
-        textbox->AppendText("Dec");
+        textbox->Clear();
+        textbox->AppendText(std::to_string((int)num1));
+        justSolved = false;
         break;
     case 10019:
         textbox->AppendText("%");
+        op = '%';
+        justSolved = false;
         break;
     }
 }
