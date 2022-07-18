@@ -207,7 +207,7 @@ void MyWindow::OnButtonClicked(wxCommandEvent& evt) {
         }
         else {
             num2 = (num2 * 10) + 8;
-        }
+        } 
         justSolved = false;
         break;
     case 10009:
