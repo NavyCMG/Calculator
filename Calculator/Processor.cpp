@@ -50,6 +50,7 @@ std::string Processor::ToBinaryString(float num1)
 	for (int i = 0; i < 16; ++i)
 	{
 		output = std::to_string((int)num1 % 2) + output;
+		num1 = num1 / 2;
 	}
 	return output;
 }
